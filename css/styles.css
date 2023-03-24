@@ -653,8 +653,10 @@ ul {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-value:hover {
+.input-value:hover,
+.input-value:focus {
   border-color: #2196f3;
+  outline: none;
 }
 
 .input-group {
@@ -822,6 +824,7 @@ ul {
   line-height: 14px;
   font-family: 'Roboto';
   font-style: normal;
+  display: block;
 }
 
 .form-input-person {
@@ -837,6 +840,7 @@ ul {
 .form-input-person:focus,
 .form-input-person:hover {
   border-color: #2196f3;
+  outline: none;
 }
 
 .form-commet {
@@ -862,30 +866,47 @@ ul {
 .form-textarea:focus,
 .form-textarea:hover {
   border-color: #2196f3;
+  outline: none;
 }
 
 .icon-checkbox {
-  margin-left: 13px;
-  margin-top: 20px;
-  background: #2196f3;
-  border-radius: 2px;
-  display: block;
-}
-
-.icon-checkbox:checked:hover {
-  background-color: #2196f3;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+  width: 16px;
+  height: 15px;
 }
 
 .text-checkbox {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
-  width: 400px;
-  height: 24px;
   left: 30px;
   bottom: 19px;
   position: relative;
   color: #757575;
   font-family: 'Roboto';
-  font-style: normal;
+}
+
+/* Icon checkbox */
+
+.checkbox-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 7px;
+  margin-top: 5px;
+  margin-left: 10px;
+  width: 16px;
+  height: 15px;
+  cursor: pointer;
+  border-radius: 2px;
+  fill: #2196f3;
+}
+
+.icon-checkbox:checked + .checkbox-icon-container {
+  border-color: #2196f3;
+  background-color: #2196f3;
+  opacity: 1;
 }
