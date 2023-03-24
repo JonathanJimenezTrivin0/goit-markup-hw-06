@@ -723,7 +723,6 @@ ul {
   display: flex;
   justify-content: center;
   position: relative;
-  bottom: 20px;
 }
 
 /* Modal */
@@ -882,8 +881,6 @@ ul {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
-  left: 30px;
-  bottom: 19px;
   position: relative;
   color: #757575;
   font-family: 'Roboto';
@@ -902,11 +899,25 @@ ul {
   height: 15px;
   cursor: pointer;
   border-radius: 2px;
-  fill: #2196f3;
+  border: 1px solid black;
+  fill: #ffffff;
 }
 
 .icon-checkbox:checked + .checkbox-icon-container {
   border-color: #2196f3;
   background-color: #2196f3;
   opacity: 1;
+}
+
+.icon-checkbox:focus + .checkbox-icon-container {
+  border-color: #2196f3;
+  background-color: #2196f3;
+}
+
+.modal-checkbox {
+  flex-direction: row;
+  margin-bottom: 0;
+  align-items: center;
+  display: flex;
+  align-items: flex-start;
 }
