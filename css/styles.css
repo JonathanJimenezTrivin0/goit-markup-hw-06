@@ -901,12 +901,13 @@ ul {
   border-radius: 2px;
   border: 1px solid black;
   fill: #ffffff;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-checkbox:checked + .checkbox-icon-container {
   border-color: #2196f3;
   background-color: #2196f3;
-  opacity: 1;
 }
 
 .icon-checkbox:focus + .checkbox-icon-container {
